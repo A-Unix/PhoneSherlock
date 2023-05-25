@@ -7,7 +7,7 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 echo "Checking & installing required packages"
-sudo apt update -y && apt install python3-pip -y && pip3 install pyfiglet -y
+sudo apt update -y && apt install python3-pip -y && pip install pyfiglet -y
 echo "Done!"
 
 # Python banner code
