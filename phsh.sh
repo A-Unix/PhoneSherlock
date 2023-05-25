@@ -18,7 +18,6 @@ banner_text = "banner"
 banner = pyfiglet.Figlet().renderText(banner_text)
 print(banner)
 END
-)
 
 banner = """
                                       _ _ _                                        _ _ _                 _ _ _   
@@ -34,6 +33,7 @@ banner = """
 | This tool was created by Hash30 a.k.a anonymous.
 | Please note that i'm not responsible for the misuse of this tool, it has been created only for educational purposes, use it at your own responsibility!
 """
+)
 
 # Display the Python banner
 echo "$python_banner"
