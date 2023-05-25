@@ -13,6 +13,6 @@ Hi guyz, I'm back with another script which can be used to find all phone number
 ```bash
 git clone https://github.com/hash30/PhoneSherlock.git
 ```
-``bash
+```bash
 cd PhoneSherlock
 ```
