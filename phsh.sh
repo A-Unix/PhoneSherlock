@@ -8,18 +8,16 @@ fi
 
 echo "Checking & installing required packages"
 
-sudo apt update -y && apt install python3-pip -y && pip install pyfiglet -y
+sudo apt update -y && apt install python3-pip -y && pip install pyfiglet
 
 echo "Done!"
+read -p "Press Enter to continue..."
 
 # Python banner code
 python_banner=$(python - <<END
 import pyfiglet
 
 banner_text = "banner"
-banner = pyfiglet.Figlet().renderText(banner_text)
-print(banner)
-END
 
 banner = " 
 
@@ -36,16 +34,22 @@ banner = "
 | This tool was created by Hash30 a.k.a anonymous.
 | Please note that i'm not responsible for the misuse of this tool, it has been created only for educational purposes, use it at your own responsibility!
 "
+
+banner = pyfiglet.Figlet().renderText(banner_text)
+print(banner)
+END
 )
 
 # Display the Python banner
 echo "$python_banner"
+read -p "Press Enter to continue..."
 
 # Update/Upgrade system
 echo "Please wait while we update and fix your system to ensure that script works seemlessly... Hold your horses :)"
 sudo apt update && apt dist-upgrage -y && apt --fix-broken install -y && apt autoremove -y
 
 echo "Update done! Thanks for your patience"
+read -p "Press Enter to continue..."
 
 echo "Now, let's make you ANONYMOUS to ensure that you do not get caught ;)"
 
