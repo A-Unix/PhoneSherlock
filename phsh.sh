@@ -7,7 +7,9 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 echo "Checking & installing required packages"
+
 sudo apt update -y && apt install python3-pip -y && pip install pyfiglet -y
+
 echo "Done!"
 
 # Python banner code
@@ -19,7 +21,8 @@ banner = pyfiglet.Figlet().renderText(banner_text)
 print(banner)
 END
 
-banner = """
+banner = " 
+
                                       _ _ _                                        _ _ _                 _ _ _   
                 /\       |\      |  /       \   |\      | \       / |\      /|   /       \   |     |   /       \ 
                /  \      | \     | |         |  | \     |  \     /  | \    / |  |         |  |     |  |         |
@@ -32,14 +35,11 @@ banner = """
 | You may get an error if you do not enter your webpage address correctly.
 | This tool was created by Hash30 a.k.a anonymous.
 | Please note that i'm not responsible for the misuse of this tool, it has been created only for educational purposes, use it at your own responsibility!
-"""
+"
 )
 
 # Display the Python banner
 echo "$python_banner"
-
-
-print(banner)
 
 # Update/Upgrade system
 echo "Please wait while we update and fix your system to ensure that script works seemlessly... Hold your horses :)"
