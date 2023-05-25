@@ -49,29 +49,40 @@ echo "Please wait while we update and fix your system to ensure that script work
 sudo apt update && apt dist-upgrade -y && apt --fix-broken install -y && apt autoremove -y
 
 echo "Update done! Thanks for your patience"
-read -p "Press Enter to continue..."
+
+sleep 1
 
 echo "Now, let's make you ANONYMOUS to ensure that you do not get caught ;)"
-read -p "Press Enter to continue..."
+
+sleep 2
 
 echo "Goin undercover!"
-read -p "Press Enter to continue..."
+
+sleep 1
 
 echo "Importing required package"
 git clone https://github.com/Anonymous-Hash30/anonymous.script.git
 echo "Import done!"
 
+sleep 1
+
 echo "Entering into script folder"
 cd anonymous.script
 echo "Entered!"
+
+sleep 1
 
 echo "Getting required permissions"
 chmod +x installer.sh
 echo "Done!"
 
+sleep 2
+
 echo "Running the script now, please keep patience!"
 ./installer.sh
 echo "Thanks for your paitence, you are ANONYMOUS now :)"
+
+sleep 3
 
 cd ..
 
