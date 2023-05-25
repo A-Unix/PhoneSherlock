@@ -19,7 +19,7 @@ import pyfiglet
 
 banner_text = "banner"
 
-banner = " 
+banner_text = " 
 
                                       _ _ _                                        _ _ _                 _ _ _   
                 /\       |\      |  /       \   |\      | \       / |\      /|   /       \   |     |   /       \ 
