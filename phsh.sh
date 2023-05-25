@@ -46,14 +46,16 @@ read -p "Press Enter to continue..."
 
 # Update/Upgrade system
 echo "Please wait while we update and fix your system to ensure that script works seemlessly... Hold your horses :)"
-sudo apt update && apt dist-upgrage -y && apt --fix-broken install -y && apt autoremove -y
+sudo apt update && apt dist-upgrade -y && apt --fix-broken install -y && apt autoremove -y
 
 echo "Update done! Thanks for your patience"
 read -p "Press Enter to continue..."
 
 echo "Now, let's make you ANONYMOUS to ensure that you do not get caught ;)"
+read -p "Press Enter to continue..."
 
 echo "Goin undercover!"
+read -p "Press Enter to continue..."
 
 echo "Importing required package"
 git clone https://github.com/Anonymous-Hash30/anonymous.script.git
