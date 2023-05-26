@@ -168,7 +168,7 @@ time.sleep(1)
 if formatted_numbers:
     print(Fore.GREEN + "\nIndian numbers found:\n")
     for number in formatted_numbers:
-        print(Fore.YELLOW + number\n)
+        print(Fore.YELLOW + number)
 else:
     print(Fore.RED + "\nNo numbers found.\n")
 
