@@ -154,8 +154,8 @@ phone_numbers = re.findall(r"\b\d{3}-\d{3}-\d{4}\b", response.text)
 formatted_numbers = [re.sub(r"\D", "", number) for number in phone_numbers]
 
 # Check if the backend process has finished
-    # Replace this condition with your actual logic to check the backend process status
-    website_url_running = check_website_url_status()
+# Replace this condition with your actual logic to check the backend process status
+website_url_running = check_website_url_status()
 
 # The backend process has finished
 print(Fore.CYAN + "[+] Finding Numbers... Done!\n")
