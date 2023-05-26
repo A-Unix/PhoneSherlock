@@ -16,6 +16,8 @@ os.system("pip install pyfiglet")
 
 print("Done!")
 
+clear
+
 time.sleep(1)
 
 print("\nWelcome!")
@@ -89,29 +91,34 @@ subprocess.check_call(["pip", "install", "colorama"])
 from colorama import init, Fore
 # Initialize colorama
 init()
-print(Fore.GREEN + "Done! Now you can see the result of installing Colorama in this line :)")
+print(Fore.MAGENTA + "\nDone! Now you can see the result of installing Colorama in this line :)\n")
+
+clear
 
 time.sleep(1)
 
-print(Fore.GREEN + "Checking if Pip3 is already installed")
+print(Fore.GREEN + "\nChecking if Pip3 is already installed\n")
 
 # Check if python3-pip is already installed
 try:
     dist = pkg_resources.get_distribution('pip')
-    print(Fore.GREEN + "Pip3 is already installed.")
+    print(Fore.GREEN + "\nPip3 is already installed.\n")
     
 except pkg_resources.DistributionNotFound:
     pass  # Proceed with the installation
 
-print(Fore.RED + "Oops! Pip3 not found on your system, don't worry, I'm installing it for you :)\n")
+print(Fore.RED + "\nOops! Pip3 not found on your system, don't worry, I'm installing it for you :)\n")
 time.sleep(1)
-print(Fore.GREEN + "Installing Pip3 now!\n")
+print(Fore.GREEN + "\nInstalling Pip3 now!\n")
 time.sleep(1)
 
 # Install python3-pip using apt
 subprocess.check_call(["apt", "install", "python3-pip", "-y"])
 
-print("Done!")
+print("Done!\n")
+
+clear
+
 input(Fore.GREEN + "Press Enter to continue...")
 
 # Specify the website URL
@@ -152,23 +159,25 @@ formatted_numbers = [re.sub(r"\D", "", number) for number in phone_numbers]
 # The backend process has finished
 print(Fore.CYAN + "[+] Finding Numbers... Done!\n")
 
+clear
+
 time.sleep(1)
 
 # Print the formatted phone numbers
 if formatted_numbers:
-    print(fore.GREEN + "Indian numbers found:\n")
+    print(fore.GREEN + "\nIndian numbers found:\n")
     for number in formatted_numbers:
         print(Fore.YELLOW + number\n)
 else:
-    print(Fore.RED + "No numbers found.")
+    print(Fore.RED + "\nNo numbers found.\n")
 
 time.sleep(1)
 
 # Print the other numbers
 if phone_numbers:
-    print(Fore.BLUE + "Other numbers found:")
+    print(Fore.BLUE + "\nOther numbers found:\n")
     for number in phone_numbers:
         print(Fore.MAGENTA + number)
 else:
-    print(Fore.RED + "No other numbers found.")
+    print(Fore.RED + "\nNo other numbers found.")
 
