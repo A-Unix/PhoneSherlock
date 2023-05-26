@@ -71,7 +71,7 @@ import pkg_resources
 try:
     dist = pkg_resources.get_distribution('colorama')
     print('Colorama', dist.version, 'is already installed.')
-    exit(0)  # Exit the script
+      # Exit the script
 except pkg_resources.DistributionNotFound:
     pass  # Proceed with the installation
 
@@ -96,7 +96,7 @@ print(Fore.BROWN + "Checking if Pip3 is already installed")
 try:
     dist = pkg_resources.get_distribution('pip')
     print(Fore.GREEN + "Pip3 is already installed.")
-    exit(0)  # Exit the script
+    
 except pkg_resources.DistributionNotFound:
     pass  # Proceed with the installation
 
