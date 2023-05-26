@@ -16,7 +16,7 @@ os.system("pip install pyfiglet")
 
 print("Done!")
 
-clear
+os.system("clear")
 
 time.sleep(1)
 
@@ -93,7 +93,7 @@ from colorama import init, Fore
 init()
 print(Fore.MAGENTA + "\nDone! Now you can see the result of installing Colorama in this line :)\n")
 
-clear
+os.system("clear")
 
 time.sleep(1)
 
@@ -117,7 +117,7 @@ subprocess.check_call(["apt", "install", "python3-pip", "-y"])
 
 print("Done!\n")
 
-clear
+os.system("clear")
 
 input(Fore.GREEN + "Press Enter to continue...")
 
@@ -160,7 +160,7 @@ website_url_running = check_website_url_status()
 # The backend process has finished
 print(Fore.CYAN + "[+] Finding Numbers... Done!\n")
 
-clear
+os.system("clear")
 
 time.sleep(1)
 
