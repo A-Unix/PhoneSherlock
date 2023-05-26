@@ -132,9 +132,9 @@ def check_website_url_status():
 website_url_running = True
 
 while website_url_running:
-  print(Fore.BLUE + "[+] Finding Numbers", end="")
+    print(Fore.BLUE + "[+] Finding Numbers", end="")
   
-  # Blinking effect using a loop
+    # Blinking effect using a loop
     for _ in range(3):
         print(".", end="", flush=True)
         time.sleep(0.5)  # Delay between each dot
@@ -142,6 +142,7 @@ while website_url_running:
     # Clearing the dots using a backspace character (\b)
     print("\b" * 3, end="", flush=True)
     time.sleep(0.5)  # Delay between removing the dot
+
 
  # Send a GET request to the website
 response = requests.get(website_url)
