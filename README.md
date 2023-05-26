@@ -17,9 +17,9 @@ git clone https://github.com/Anonymous-Hash30/PhoneSherlock.git
 cd PhoneSherlock
 ```
 ```bash
-chmode +x phsh.sh
+chmode +x phsh.py
 ```
 ```bash
-./phsh.sh
+./phsh.py
 ```
 Enjoy :)
