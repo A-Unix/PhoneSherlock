@@ -6,6 +6,7 @@ import requests
 import os
 from os import system as s
 import time
+from colorama import init, Fore
 
 print("Please wait!")
 
@@ -40,6 +41,8 @@ banner = r'''
 '''
 
 print(banner)
+
+time.sleep(7)
 
 import datetime
 now = datetime.datetime.now()
