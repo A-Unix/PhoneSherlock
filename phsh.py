@@ -117,7 +117,26 @@ input(Fore.GREEN + "Press Enter to continue...")
 # Specify the website URL
 website_url = input(Fore.GREEN + "Please enter webpage url Ex: https://example.com >>> ")
 
-# Send a GET request to the website
+# Define a function to check the backend process status
+def check_website_url_status():
+    # Replace this with your actual logic to check the backend process status
+    return False
+
+website_url_running = True
+
+while website_url_running:
+  print(Fore.BLUE + "[+] Finding Numbers", end="")
+  
+  # Blinking effect using a loop
+    for _ in range(3):
+        print(".", end="", flush=True)
+        time.sleep(0.5)  # Delay between each dot
+        
+    # Clearing the dots using a backspace character (\b)
+    print("\b" * 3, end="", flush=True)
+    time.sleep(0.5)  # Delay between removing the dot
+
+ # Send a GET request to the website
 response = requests.get(website_url)
 
 # Extract phone numbers using regular expressions
@@ -126,16 +145,30 @@ phone_numbers = re.findall(r"\b\d{3}-\d{3}-\d{4}\b", response.text)
 # Convert phone numbers to XXXXXXXXXX format
 formatted_numbers = [re.sub(r"\D", "", number) for number in phone_numbers]
 
-# Print the converted phone numbers
-print(Fore.GREEN + "Indian numbers found:")
-for number in formatted_numbers:
-    print(Fore.YELLOW + number)
+# Check if the backend process has finished
+    # Replace this condition with your actual logic to check the backend process status
+    website_url_running = check_website_url_status()
 
-time.sleep(2)
+# The backend process has finished
+print(Fore.CYAN + "[+] Finding Numbers... Done!\n")
 
-# Print the phone numbers found
-print(Fore.GREEN + "Other numbers found:")
-for number in phone_numbers:
-    print(Fore.YELLOW + number)
-    
 time.sleep(1)
+
+# Print the formatted phone numbers
+if formatted_numbers:
+    print(fore.GREEN + "Indian numbers found:\n")
+    for number in formatted_numbers:
+        print(Fore.YELLOW + number\n)
+else:
+    print(Fore.RED + "No numbers found.")
+
+time.sleep(1)
+
+# Print the other numbers
+if phone_numbers:
+    print(Fore.BLUE + "Other numbers found:")
+    for number in phone_numbers:
+        print(Fore.MAGENTA + number)
+else:
+    print(Fore.RED + "No other numbers found.")
+
