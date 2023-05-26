@@ -166,7 +166,7 @@ time.sleep(1)
 
 # Print the formatted phone numbers
 if formatted_numbers:
-    print(fore.GREEN + "\nIndian numbers found:\n")
+    print(Fore.GREEN + "\nIndian numbers found:\n")
     for number in formatted_numbers:
         print(Fore.YELLOW + number\n)
 else:
