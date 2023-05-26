@@ -93,7 +93,7 @@ print(Fore.GREEN + "Done! Now you can see the result of installing Colorama in t
 
 time.sleep(1)
 
-print(Fore.BROWN + "Checking if Pip3 is already installed")
+print(Fore.GREEN + "Checking if Pip3 is already installed")
 
 # Check if python3-pip is already installed
 try:
@@ -112,7 +112,7 @@ time.sleep(1)
 subprocess.check_call(["apt", "install", "python3-pip", "-y"])
 
 print("Done!")
-input(Fore.CYAN + "Press Enter to continue...")
+input(Fore.GREEN + "Press Enter to continue...")
 
 # Specify the website URL
 website_url = input(Fore.GREEN + "Please enter webpage url Ex: https://example.com >>> ")
@@ -136,6 +136,6 @@ time.sleep(2)
 # Print the phone numbers found
 print(Fore.GREEN + "Other numbers found:")
 for number in phone_numbers:
-    print(Fore.BROWN + number)
+    print(Fore.YELLOW + number)
     
 time.sleep(1)
