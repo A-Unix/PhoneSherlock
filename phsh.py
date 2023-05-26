@@ -4,9 +4,11 @@
 import re
 import requests
 import os
-from os import system as s
 import time
 from colorama import init, Fore
+
+# Initialize colorama
+init()
 
 print("Please wait!")
 
@@ -24,9 +26,7 @@ print("\nWelcome!")
 
 time.sleep(2)
 
-
-banner = r''' 
-
+banner = r'''
                                       _ _ _                                        _ _ _                 _ _ _   
                 /\       |\      |  /       \   |\      | \       / |\      /|   /       \   |     |   /       \ 
                /  \      | \     | |         |  | \     |  \     /  | \    / |  |         |  |     |  |         |
@@ -38,8 +38,7 @@ banner = r'''
 
 || You may get an error if you do not enter your webpage address correctly. ||
 || This tool was created by Hash30 a.k.a anonymous. ||
-|| Please note that i'm not responsible for the misuse of this tool, it has been created for educational purposes only, use it at your own responsibility! ||
-
+|| Please note that I'm not responsible for the misuse of this tool, it has been created for educational purposes only, use it at your own responsibility! ||
 '''
 
 print(banner)
@@ -76,22 +75,20 @@ import pkg_resources
 try:
     dist = pkg_resources.get_distribution('colorama')
     print('Colorama', dist.version, 'is already installed.')
-      # Exit the script
 except pkg_resources.DistributionNotFound:
-    pass  # Proceed with the installation
+    print("Oops! Colorama not found on your system, don't worry, I'm installing it for you :)\n")
+    time.sleep(1)
+    print("Installing Colorama now!\n")
+    time.sleep(1)
 
-print("Oops! Colorama not found on your system, don't worry, I'm installing it for you :)\n")
-time.sleep(1)
-print("Installing Colorama now!\n")
-time.sleep(1)
+    # Install colorama using pip
+    subprocess.check_call(["pip", "install", "colorama"])
 
-# Install colorama using pip
-subprocess.check_call(["pip", "install", "colorama"])
+    from colorama import init, Fore
+    # Reinitialize colorama after installation
+    init()
 
-from colorama import init, Fore
-# Initialize colorama
-init()
-print(Fore.MAGENTA + "\nDone! Now you can see the result of installing Colorama in this line :)\n")
+    print(Fore.MAGENTA + "\nDone! Now you can see the result of installing Colorama in this line :)\n")
 
 os.system("clear")
 
@@ -101,21 +98,18 @@ print(Fore.GREEN + "\nChecking if Pip3 is already installed\n")
 
 # Check if python3-pip is already installed
 try:
-    dist = pkg_resources.get_distribution('pip')
+    dist = pkg_resources.get_distribution('pip3')
     print(Fore.GREEN + "\nPip3 is already installed.\n")
-    
 except pkg_resources.DistributionNotFound:
-    pass  # Proceed with the installation
+    print(Fore.RED + "\nOops! Pip3 not found on your system, don't worry, I'm installing it for you :)\n")
+    time.sleep(1)
+    print(Fore.GREEN + "\nInstalling Pip3 now!\n")
+    time.sleep(1)
 
-print(Fore.RED + "\nOops! Pip3 not found on your system, don't worry, I'm installing it for you :)\n")
-time.sleep(1)
-print(Fore.GREEN + "\nInstalling Pip3 now!\n")
-time.sleep(1)
+    # Install python3-pip using apt
+    subprocess.check_call(["apt", "install", "python3-pip", "-y"])
 
-# Install python3-pip using apt
-subprocess.check_call(["apt", "install", "python3-pip", "-y"])
-
-print("Done!\n")
+    print("Done!\n")
 
 os.system("clear")
 
@@ -133,18 +127,20 @@ website_url_running = True
 
 while website_url_running:
     print(Fore.BLUE + "[+] Finding Numbers", end="")
-  
+
     # Blinking effect using a loop
     for _ in range(3):
         print(".", end="", flush=True)
         time.sleep(0.5)  # Delay between each dot
-        
+
     # Clearing the dots using a backspace character (\b)
     print("\b" * 3, end="", flush=True)
     time.sleep(0.5)  # Delay between removing the dot
 
+    # Check if the backend process has finished
+    website_url_running = check_website_url_status()
 
- # Send a GET request to the website
+# Send a GET request to the website
 response = requests.get(website_url)
 
 # Extract phone numbers using regular expressions
@@ -152,10 +148,6 @@ phone_numbers = re.findall(r"\b\d{3}-\d{3}-\d{4}\b", response.text)
 
 # Convert phone numbers to XXXXXXXXXX format
 formatted_numbers = [re.sub(r"\D", "", number) for number in phone_numbers]
-
-# Check if the backend process has finished
-# Replace this condition with your actual logic to check the backend process status
-website_url_running = check_website_url_status()
 
 # The backend process has finished
 print(Fore.CYAN + "[+] Finding Numbers... Done!\n")
@@ -181,4 +173,3 @@ if phone_numbers:
         print(Fore.MAGENTA + number)
 else:
     print(Fore.RED + "\nNo other numbers found.")
-
