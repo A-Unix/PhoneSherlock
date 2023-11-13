@@ -77,7 +77,7 @@ try:
     print('Colorama', dist.version, 'is already installed.')
 except pkg_resources.DistributionNotFound:
     print("Oops! Colorama not found on your system, don't worry, I'm installing it for you :)\n")
-    time.sleep(1)
+    time.sleep(2)
     print("Installing Colorama now!\n")
     time.sleep(1)
 
