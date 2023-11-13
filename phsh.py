@@ -37,7 +37,7 @@ banner = r'''
           /            \ |      \|  \_ _ _ _/   |      \|     |     |        |   \_ _ _ _/   \_ _ _/  \ _  _  _/ 
 
 || You may get an error if you do not enter your webpage address correctly. ||
-|| This tool was created by Hash30 a.k.a anonymous. ||
+|| This tool was created by Atul a.k.a anonymous. ||
 || Please note that I'm not responsible for the misuse of this tool, it has been created for educational purposes only, use it at your own responsibility! ||
 '''
 
