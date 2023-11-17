@@ -38,7 +38,7 @@ banner = r'''
 
 || You may get an error if you do not enter your webpage address correctly. ||
 || This tool was created by Atul a.k.a anonymous. ||
-|| Please note that I'm not responsible for the misuse of this tool, it has been created for educational purposes only, use it at your own responsibility! ||
+Just so you know, I'm not responsible for the misuse of this tool, it has been created for educational purposes only, and you can use it at your own responsibility! ||
 '''
 
 print(banner)
@@ -108,12 +108,43 @@ except pkg_resources.DistributionNotFound:
 
     # Install python3-pip using apt
     subprocess.check_call(["apt", "install", "python3-pip", "-y"])
+    time.sleep(1)
 
     print("Done!\n")
 
 os.system("clear")
 
+# Waiting for user response
 input(Fore.GREEN + "Press Enter to continue...")
+
+print(Fore.BLUE + "\n Let's go undercover ;)\n")
+
+repository_url = 'https://github.com/Atuls-git/kali-anonsurf.git'
+
+# Cloning the repo
+
+print("Cloning into the repository!\n")
+subprocess.run(['git', 'clone', repository_url])
+
+print("Done!\n")
+
+subprocess.run(['cd kali-anonsurf'])
+
+# Getting necessary permissions
+subprocess.run(['chmod +x installer.sh'])
+
+# Installing the script
+subprocess.run(['./installer.sh'])
+
+# Start the script
+subprocess.run(['anonsurf start'])
+
+# Give a success message to the user
+print(Fore.GREEN + "Done! You're undercover now ;)")
+
+# Head back to the main script folder
+subprocess.run(['cd ..'])
+
 
 # Specify the website URL
 website_url = input(Fore.GREEN + "Please enter webpage url Ex: https://example.com >>> ")
@@ -152,8 +183,6 @@ formatted_numbers = [re.sub(r"\D", "", number) for number in phone_numbers]
 # The backend process has finished
 print(Fore.CYAN + "[+] Finding Numbers... Done!\n")
 
-os.system("clear")
-
 time.sleep(1)
 
 # Print the formatted phone numbers
@@ -173,3 +202,5 @@ if phone_numbers:
         print(Fore.MAGENTA + number)
 else:
     print(Fore.RED + "\nNo other numbers found.")
+
+subprocess.run(['anonsurf stop'])
