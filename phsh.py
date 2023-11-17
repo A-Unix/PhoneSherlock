@@ -147,7 +147,7 @@ subprocess.run(['cd ..'])
 
 
 # Specify the website URL
-website_url = input(Fore.GREEN + "Please enter webpage url Ex: https://example.com >>> ")
+website_url = input(Fore.BLUE + "Please enter webpage url Ex: https://example.com >>> ")
 
 # Define a function to check the backend process status
 def check_website_url_status():
