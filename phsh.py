@@ -119,6 +119,12 @@ input(Fore.GREEN + "Press Enter to continue...")
 
 print(Fore.BLUE + "\n Let's go undercover ;)\n")
 
+import subprocess
+from colorama import Fore, init
+
+# Initialize colorama
+init()
+
 repository_url = 'https://github.com/Atuls-git/kali-anonsurf.git'
 
 # Cloning the repo
@@ -129,30 +135,31 @@ print(Fore.GREEN + "Done!\n")
 
 print(Fore.BLUE + "Installing the script now... Please keep patience...\n")
 
-open_folder = 'cd kali-anonsurf'
-
-subprocess.run([open_folder])
+# Move to the cloned folder
+script_folder = 'kali-anonsurf'
+open_folder = f'cd {script_folder}'
+subprocess.run(open_folder, shell=True)
 
 # Getting necessary permissions
 get_permissions = 'chmod +x installer.sh'
-subprocess.run([get_permission])
+subprocess.run(get_permissions, shell=True)
 
 # Installing the script
 install = './installer.sh'
-subprocess.run([install])
+subprocess.run(install, shell=True)
 
 print(Fore.CYAN + "Running the program now, please wait!\n")
 
 # Start the script
 start_script = 'anonsurf start'
-subprocess.run([start_script])
+subprocess.run(start_script, shell=True)
 
 # Give a success message to the user
 print(Fore.GREEN + "Done! You're undercover now ;)\n")
 
 # Head back to the main script folder
 goback = 'cd ..'
-subprocess.run([goback])
+subprocess.run(goback, shell=True)
 
 
 # Specify the website URL
