@@ -122,28 +122,37 @@ print(Fore.BLUE + "\n Let's go undercover ;)\n")
 repository_url = 'https://github.com/Atuls-git/kali-anonsurf.git'
 
 # Cloning the repo
-
 print("Cloning into the repository!\n")
 subprocess.run(['git', 'clone', repository_url])
 
-print("Done!\n")
+print(Fore.GREEN + "Done!\n")
 
-subprocess.run(['cd kali-anonsurf'])
+print(Fore.BLUE + "Installing the script now... Please keep patience...\n")
+
+open_folder = 'cd kali-anonsurf'
+
+subprocess.run([open_folder])
 
 # Getting necessary permissions
-subprocess.run(['chmod +x installer.sh'])
+get_permissions = 'chmod +x installer.sh'
+subprocess.run([get_permission])
 
 # Installing the script
-subprocess.run(['./installer.sh'])
+install = './installer.sh'
+subprocess.run([install])
+
+print(Fore.CYAN + "Running the program now, please wait!\n")
 
 # Start the script
-subprocess.run(['anonsurf start'])
+start_script = 'anonsurf start'
+subprocess.run([start_script])
 
 # Give a success message to the user
-print(Fore.GREEN + "Done! You're undercover now ;)")
+print(Fore.GREEN + "Done! You're undercover now ;)\n")
 
 # Head back to the main script folder
-subprocess.run(['cd ..'])
+goback = 'cd ..'
+subprocess.run([goback])
 
 
 # Specify the website URL
@@ -203,4 +212,6 @@ if phone_numbers:
 else:
     print(Fore.RED + "\nNo other numbers found.")
 
-subprocess.run(['anonsurf stop'])
+# Stop anonsurf
+anonstop = 'anonsurf stop'
+subprocess.run([anonstop])
