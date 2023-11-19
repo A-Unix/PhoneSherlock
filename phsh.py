@@ -119,12 +119,6 @@ input(Fore.GREEN + "Press Enter to continue...")
 
 print(Fore.BLUE + "\n Let's go undercover ;)\n")
 
-import subprocess
-from colorama import Fore, init
-
-# Initialize colorama
-init()
-
 repository_url = 'https://github.com/Atuls-git/kali-anonsurf.git'
 
 # Cloning the repo
