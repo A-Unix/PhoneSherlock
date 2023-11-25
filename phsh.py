@@ -37,9 +37,8 @@ banner = r'''
           /            \ |      \|  \_ _ _ _/   |      \|     |     |        |   \_ _ _ _/   \_ _ _/  \ _  _  _/ 
 
 || You may get an error if you do not enter your webpage address correctly. ||
-|| This tool was created by Atul a.k.a anonymous. ||
-Just so you know, I'm not responsible for the misuse of this tool, it has been created for educational purposes only, and you can use it at your own responsibility! ||
-'''
+|| This tool was created by Atul ||
+|| Just so you know, I'm not responsible for the misuse of this tool, it has been created for educational purposes only, and you can use it at your own responsibility! ||
 
 print(banner)
 
