@@ -75,13 +75,10 @@ else
 
     # Give a success message to the user
     echo -e "\e[32mDone! You're undercover now ;)\n\e[0m"
-
-    cd ..
 fi
 
-
 # Get executive permissions for the main script
-# chmod +x main.py
+chmod +x phonesherlock.py
 
 # Run the main script
-# python3 main.py
+python3 phonesherlock.py
