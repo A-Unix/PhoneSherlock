@@ -10,7 +10,9 @@ from colorama import Fore
 # Initialize colorama
 init()
 
-pip install requests
+import subprocess
+
+subprocess.run(["pip", "install", "requests"])
 
 import requests
 
