@@ -17,9 +17,17 @@ git clone https://github.com/Atuls-git/PhoneSherlock.git
 cd PhoneSherlock
 ```
 ```bash
-chmod +x phsh.py
+chmod +x installer.sh
 ```
 ```bash
-./phsh.py
+./installer.sh
+```
+## If you have already installed the dependencies, then follow the below steps
+
+```bash
+chmod +x phonesherlock.py
+```
+```bash
+./phonesherlock.py
 ```
 Enjoy :)
