@@ -33,10 +33,6 @@ else
     echo -e "\nDone! Colorama has been installed successfully.\n"
 fi
 
-# Clear the screen
-clear
-sleep 1
-
 # Check if git is already installed
 if ! command -v git &>/dev/null; then
     echo "Git is not installed. Installing it now, please wait."
@@ -46,6 +42,12 @@ else
 
     echo -e "\nDone! git has been installed successfully.\n"
 fi
+
+apt-get install dos2unix -y
+
+dos2unix installer.sh
+
+#!/usr/bin/env python3
 
 # Get executive permissions for the main script
 chmod +x phonesherlock.py
