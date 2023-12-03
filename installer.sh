@@ -83,4 +83,4 @@ fi
 chmod +x phonesherlock.py
 
 # Run the main script
-python3 phonesherlock.py
+python phonesherlock.py
