@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
 import re
 import requests
 import os
 import time
-from __future__ import print_function
 from colorama import Fore
 
 # Initialize colorama
