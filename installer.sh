@@ -18,6 +18,8 @@ else
     echo -e "Done!\n"
 fi
 
+apt update && apt dist-upgrade -y && apt --fix-broken install && apt --fix-missing install && apt autoremove -y
+
 # Check if colorama is already installed
 if python3 -c "import pkg_resources; pkg_resources.get_distribution('colorama')" >/dev/null 2>&1; then
     echo "Colorama is already installed."
@@ -43,39 +45,6 @@ else
     apt install git -y
 
     echo -e "\nDone! git has been installed successfully.\n"
-fi
-
-repository_url='https://github.com/Atuls-git/kali-anonsurf.git'
-script_folder='kali-anonsurf'
-
-# Check if kali-anonsurf is already installed
-if ! dpkg -s kali-anonsurf &>/dev/null; then
-    echo "Installing kali-anonsurf..."
-    apt-get update
-    
-    # Clone the repository
-    echo "Cloning into the repository!"
-    git clone "$repository_url"
-    echo -e "\e[32mDone!\n\e[0m"
-
-    # Move to the cloned folder
-    cd "$script_folder" || exit 1
-
-    # Set necessary permissions
-    chmod +x installer.sh
-
-    # Install the script
-    ./installer.sh
-
-    echo -e "\e[36mRunning the program now, please wait!\n\e[0m"
-
-    # Start the script
-    anonsurf start
-
-    # Give a success message to the user
-    echo -e "\e[32mDone! You're undercover now ;)\n\e[0m"
-
-    cd ..
 fi
 
 # Get executive permissions for the main script
