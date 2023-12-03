@@ -5,12 +5,13 @@ from __future__ import print_function
 import re
 import os
 import time
+import subprocess
 from colorama import Fore
+
+subprocess.run(["pip", "install", "colorama"])
 
 # Initialize colorama
 init()
-
-import subprocess
 
 subprocess.run(["pip", "install", "requests"])
 
