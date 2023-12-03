@@ -6,9 +6,10 @@ import re
 import os
 import time
 import subprocess
-from colorama import Fore
 
 subprocess.run(["pip", "install", "colorama"])
+
+from colorama import Fore
 
 # Initialize colorama
 init()
