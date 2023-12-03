@@ -3,7 +3,6 @@
 
 from __future__ import print_function
 import re
-import requests
 import os
 import time
 from colorama import Fore
@@ -12,6 +11,8 @@ from colorama import Fore
 init()
 
 pip install requests
+
+import requests
 
 print("Please wait!")
 
