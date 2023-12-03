@@ -51,7 +51,7 @@ script_folder='kali-anonsurf'
 # Check if kali-anonsurf is already installed
 if ! dpkg -s kali-anonsurf &>/dev/null; then
     echo "Installing kali-anonsurf..."
-    sudo apt-get update
+    apt-get update
 else
 
     # Clone the repository
@@ -83,4 +83,4 @@ fi
 chmod +x phonesherlock.py
 
 # Run the main script
-python phonesherlock.py
+./phonesherlock.py
