@@ -11,6 +11,8 @@ from colorama import Fore
 # Initialize colorama
 init()
 
+pip install requests
+
 print("Please wait!")
 
 os.system("clear")
