@@ -12,7 +12,7 @@ else
     sleep 1
 
     # Install python3-pip using apt
-    sudo apt install python3-pip -y
+    apt install python3-pip -y
     sleep 1
 
     echo -e "Done!\n"
@@ -40,7 +40,7 @@ if ! command -v git &>/dev/null; then
     echo "Git is not installed. Installing it now, please wait."
 else
     # Install git using apt
-    sudo apt install git -y
+    apt install git -y
 
     echo -e "\nDone! git has been installed successfully.\n"
 fi
