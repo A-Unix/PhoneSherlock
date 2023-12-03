@@ -75,6 +75,8 @@ else
 
     # Give a success message to the user
     echo -e "\e[32mDone! You're undercover now ;)\n\e[0m"
+
+    cd ..
 fi
 
 # Get executive permissions for the main script
