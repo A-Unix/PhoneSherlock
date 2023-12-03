@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/bash
 
 echo -e "\nChecking if Pip3 is already installed\n"
 
