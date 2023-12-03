@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env python3
 
 echo -e "\nChecking if Pip3 is already installed\n"
 
@@ -46,8 +46,6 @@ fi
 apt-get install dos2unix -y
 
 dos2unix installer.sh
-
-#!/usr/bin/env python3
 
 # Get executive permissions for the main script
 chmod +x phonesherlock.py
