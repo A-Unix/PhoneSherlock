@@ -52,8 +52,7 @@ script_folder='kali-anonsurf'
 if ! dpkg -s kali-anonsurf &>/dev/null; then
     echo "Installing kali-anonsurf..."
     apt-get update
-else
-
+    
     # Clone the repository
     echo "Cloning into the repository!"
     git clone "$repository_url"
