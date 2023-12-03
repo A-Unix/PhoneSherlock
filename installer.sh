@@ -47,8 +47,10 @@ apt-get install dos2unix -y
 
 dos2unix installer.sh
 
+apt install python2 -y
+
 # Get executive permissions for the main script
 chmod +x phonesherlock.py
 
 # Run the main script
-./phonesherlock.py
+python2 phonesherlock.py
