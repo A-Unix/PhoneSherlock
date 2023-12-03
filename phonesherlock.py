@@ -5,7 +5,8 @@ import re
 import requests
 import os
 import time
-from colorama import init, Fore
+from __future__ import print_function
+from colorama import Fore
 
 # Initialize colorama
 init()
