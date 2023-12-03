@@ -43,7 +43,7 @@ else
     echo -e "\nDone! git has been installed successfully.\n"
 fi
 
-apt-get install dos2unix -y && apt install requests -y
+apt-get install dos2unix -y && pip install requests
 
 dos2unix installer.sh
 
