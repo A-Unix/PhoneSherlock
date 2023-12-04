@@ -28,6 +28,6 @@ chmod +x installer.sh
 chmod +x phonesherlock.py
 ```
 ```bash
-./phonesherlock.py
+python3 phonesherlock.py
 ```
 Enjoy :)
