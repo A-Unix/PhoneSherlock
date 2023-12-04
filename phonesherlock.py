@@ -1,25 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
 import re
 import os
 import time
 import subprocess
-
-subprocess.run(["pip", "install", "colorama"])
-
-from colorama import Fore
+import requests
+from colorama import init, Fore
 
 # Initialize colorama
 init()
 
-subprocess.run(["pip", "install", "requests"])
-
-import requests
+# Install colorama and requests using subprocess
+subprocess.run(["pip", "install", "colorama", "requests"])
 
 print("Please wait!")
 
+# Clear the terminal screen
 os.system("clear")
 
 time.sleep(1)
@@ -42,6 +39,7 @@ banner = r'''
 || This tool was created by Atul ||
 || Just so you know, I'm not responsible for the misuse of this tool, it has been created for educational purposes only, and you can use it at your own responsibility! ||
 '''
+
 print(banner)
 
 time.sleep(7)
@@ -66,9 +64,6 @@ if os.geteuid() != 0:
     exit(1)
 
 time.sleep(1)
-
-import subprocess
-import pkg_resources
 
 # Waiting for user response
 input(Fore.GREEN + "Press Enter to continue...")
