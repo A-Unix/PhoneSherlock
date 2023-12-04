@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 echo -e "\nChecking if Pip3 is already installed\n"
 
@@ -12,13 +12,18 @@ else
     sleep 1
 
     # Install python3-pip using apt
+    apt update
     apt install python3-pip -y
     sleep 1
 
     echo -e "Done!\n"
 fi
 
-apt update && apt dist-upgrade -y && apt --fix-broken install && apt --fix-missing install && apt autoremove -y
+apt update
+apt dist-upgrade -y
+apt --fix-broken install -y
+apt --fix-missing install -y
+apt autoremove -y
 
 # Check if colorama is already installed
 if python3 -c "import pkg_resources; pkg_resources.get_distribution('colorama')" >/dev/null 2>&1; then
@@ -36,14 +41,12 @@ fi
 # Check if git is already installed
 if ! command -v git &>/dev/null; then
     echo "Git is not installed. Installing it now, please wait."
-else
-    # Install git using apt
     apt install git -y
-
     echo -e "\nDone! git has been installed successfully.\n"
 fi
 
-apt-get install dos2unix -y && pip install requests
+apt-get install dos2unix -y
+pip install requests
 
 dos2unix installer.sh
 
