@@ -11,7 +11,7 @@ Hi guys, I'm back with another script that can be used to find all phone numbers
 ## Steps To Install
 
 ```bash
-git clone https://github.com/Atuls-git/PhoneSherlock.git
+git clone https://github.com/A-Unix/PhoneSherlock.git
 ```
 ```bash
 cd PhoneSherlock
